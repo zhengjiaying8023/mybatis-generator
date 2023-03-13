@@ -27,7 +27,7 @@ mybatis逆向工程
 ## 第二步配置xml
  文件名称；mybatis-generator.xml
 
-##第三步 main执行生成mybatis层级
+## 第三步 main执行生成mybatis层级
 ```
   public class MybatisGeneratorTest {
            public static void main(String[] args) throws Exception {
