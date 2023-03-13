@@ -28,16 +28,19 @@ mybatis逆向工程
  文件名称；mybatis-generator.xml
 
 ##第三步 main执行生成mybatis层级
-    public class MybatisGeneratorTest {
-        public static void main(String[] args) throws Exception {
-               List<String> warnings = new ArrayList<String>();
-               boolean overwrite = true;
-    //FileNotFoundException: mybatis-generator.xml 路径更详细就可以了
-               File configFile = new File("src/main/resources/mybatis-generator.xml");
-               ConfigurationParser cp = new ConfigurationParser(warnings);
-               Configuration config = cp.parseConfiguration(configFile);
-               DefaultShellCallback callback = new DefaultShellCallback(overwrite);
-               MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
-               myBatisGenerator.generate(null);
-        }
-    }
+```
+  public class MybatisGeneratorTest {
+           public static void main(String[] args) throws Exception {
+                  List<String> warnings = new ArrayList<String>();
+                  boolean overwrite = true;
+       //FileNotFoundException: mybatis-generator.xml 路径更详细就可以了
+                  File configFile = new File("src/main/resources/mybatis-generator.xml");
+                  ConfigurationParser cp = new ConfigurationParser(warnings);
+                  Configuration config = cp.parseConfiguration(configFile);
+                  DefaultShellCallback callback = new DefaultShellCallback(overwrite);
+                  MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
+                  myBatisGenerator.generate(null);
+           }
+       }
+
+```
